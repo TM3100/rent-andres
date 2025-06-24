@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestión de Espacios</title>
+  <link rel="stylesheet" href="css/styles1.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">CSRent</div>
+    <nav class="menu">
+      <a href="index.html">Inicio</a>
+      <a href="user.html">Usuarios</a>
+      <a href="space.html" class="active">Espacios</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Espacios</h2>
+
+    <section class="form-section">
+      <h3>Agregar/Editar Espacio</h3>
+      <form id="space-form">
+        <input type="hidden" id="space-id" />
+        <input type="text" id="name" placeholder="Nombre del espacio" required />
+
+        <input type="number" id="areaInSquareMeters" placeholder="Área en metros cuadrados" required />
+        <input type="number" id="capacity" placeholder="Capacidad" required />
+    
+        <button type="submit">Guardar</button>
+      </form>
+    </section>
+
+    <section class="search-section">
+      <input type="text" id="search-space" placeholder="Buscar espacio por nombre..." />
+    </section>
+
+    <section class="table-section">
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Área en m²</th>
+            <th>Capacidad</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="space-table-body">
+          <!-- Filas dinámicas -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="js/space.js"></script>
+</body>
+</html>
